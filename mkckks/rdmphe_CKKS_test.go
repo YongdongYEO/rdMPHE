@@ -790,7 +790,7 @@ func Test_dMPHE_CKKS(t *testing.T) {
 
 func Test_MKHE_CKKS(t *testing.T) {
 
-	var PartySet = [8]int{2, 4, 8, 16, 32, 64, 128, 256}
+	var PartySet = [7]int{2, 4, 8, 16, 32, 64, 128}
 
 	for _, P := range PartySet {
 		fmt.Printf("P = %d\n", P)
@@ -1487,7 +1487,7 @@ func Test_MKHE_CKKS_fig(t *testing.T) {
 	for _, P := range PartySet {
 		fmt.Printf("P = %d\n", P)
 
-		numJoin := 8
+		numJoin := 7
 		KeyGen := make([]time.Duration, iternum)
 		Switch := make([]time.Duration, iternum)
 		EvalTime1 := make([]time.Duration, iternum)
