@@ -1,0 +1,16 @@
+This repository provides an implementation of the Dynamic Multi-Party Homomorphic Encryption (dMPHE) and Reusable Dynamic Multi-Party Homomorphic Encryption (rdMPHE) schemes represented in a CiC submission. This library is built upon (https://github.com/SNUCP/snu-mghe, from https://github.com/SNUCP/MKHE-KKLSS) and Lattigo v2.3.0(https://github.com/tuneinsight/lattigo/tree/v2.3.0).
+
+
+LICENSE
+===============
+Attribution-NonCommercial 2.0 Generic (CC BY-NC 2.0)
+
+HOW TO INSTALL
+==============
+use "go mod vendor" 
+
+HOW TO RUN
+====================
+1. go to target folder (e.g for mkckks "cd mkckks")
+2. run go benchmark command "go test -timeout=0 -args -n=1" (This runs 10 repetition of benchmark)
+
