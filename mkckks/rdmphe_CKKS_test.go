@@ -122,8 +122,8 @@ type testParams struct {
 	evaluator *Evaluator
 	idset     *mkrlwe.IDSet
 
-	swkSet     [1024]*mkrlwe.SWKSet
-	swkheadSet [1024]*mkrlwe.SWKSet
+	swkSet     [512]*mkrlwe.SWKSet
+	swkheadSet [512]*mkrlwe.SWKSet
 }
 
 func meanStdDuration(vals []time.Duration) (mean, std time.Duration) {
@@ -241,7 +241,7 @@ const iternum = 10
 
 func Test_MPHE_CKKS(t *testing.T) {
 
-	var expPartyset = [9]int{4, 8, 16, 32, 64, 128, 256, 512, 1024}
+	var expPartyset = [8]int{4, 8, 16, 32, 64, 128, 256, 512}
 
 	for _, expParty := range expPartyset {
 		fmt.Printf("Number of Parties Before Join = %d\n", expParty)
@@ -378,7 +378,7 @@ func Test_MPHE_CKKS(t *testing.T) {
 
 func Test_rdMPHE_CKKS(t *testing.T) {
 
-	var PartySet = [9]int{2, 4, 8, 16, 32, 64, 128, 256, 512}
+	var PartySet = [8]int{2, 4, 8, 16, 32, 64, 128, 256}
 
 	for _, numParties := range PartySet {
 		fmt.Printf("Number of Parties Before Join = %d\n", numParties)
@@ -601,7 +601,7 @@ func Test_rdMPHE_CKKS(t *testing.T) {
 
 func Test_dMPHE_CKKS(t *testing.T) {
 
-	var PartySet = [9]int{2, 4, 8, 16, 32, 64, 128, 256, 512}
+	var PartySet = [8]int{2, 4, 8, 16, 32, 64, 128, 256}
 
 	for _, numParties := range PartySet {
 		fmt.Printf("Number of Parties Before Join = %d\n", numParties)
@@ -790,7 +790,7 @@ func Test_dMPHE_CKKS(t *testing.T) {
 
 func Test_MKHE_CKKS(t *testing.T) {
 
-	var PartySet = [9]int{2, 4, 8, 16, 32, 64, 128, 256, 512}
+	var PartySet = [8]int{2, 4, 8, 16, 32, 64, 128, 256}
 
 	for _, P := range PartySet {
 		fmt.Printf("P = %d\n", P)
@@ -991,7 +991,7 @@ func Test_MKHE_CKKS(t *testing.T) {
 
 func Test_MPHE_CKKS_fig(t *testing.T) {
 
-	numJoin := 10
+	numJoin := 9
 	KeyGen := make([]time.Duration, iternum)
 	Switch := make([]time.Duration, iternum)
 	EvalTime1 := make([]time.Duration, iternum)
@@ -1124,7 +1124,7 @@ func Test_rdMPHE_CKKS_fig(t *testing.T) {
 	for _, numParties := range PartySet {
 		fmt.Printf("Number of Parties Before Join = %d\n", numParties)
 
-		numJoin := 9
+		numJoin := 8
 		KeyGen := make([]time.Duration, iternum)
 		Switch := make([]time.Duration, iternum)
 		EvalTime1 := make([]time.Duration, iternum)
@@ -1323,7 +1323,7 @@ func Test_dMPHE_CKKS_fig(t *testing.T) {
 	for _, numParties := range PartySet {
 		fmt.Printf("Number of Parties Before Join = %d\n", numParties)
 
-		numJoin := 9
+		numJoin := 8
 		KeyGen := make([]time.Duration, iternum)
 		Switch := make([]time.Duration, iternum)
 		EvalTime1 := make([]time.Duration, iternum)
@@ -1487,7 +1487,7 @@ func Test_MKHE_CKKS_fig(t *testing.T) {
 	for _, P := range PartySet {
 		fmt.Printf("P = %d\n", P)
 
-		numJoin := 9
+		numJoin := 8
 		KeyGen := make([]time.Duration, iternum)
 		Switch := make([]time.Duration, iternum)
 		EvalTime1 := make([]time.Duration, iternum)
