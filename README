@@ -1,4 +1,4 @@
-This repository provides an implementation of the Dynamic Multi-Party Homomorphic Encryption (dMPHE) and Reusable Dynamic Multi-Party Homomorphic Encryption (rdMPHE) schemes represented in a CiC submission. This library is built upon (https://github.com/SNUCP/snu-mghe, from https://github.com/SNUCP/MKHE-KKLSS) and Lattigo v2.3.0(https://github.com/tuneinsight/lattigo/tree/v2.3.0).
+This repository provides an implementation of the Dynamic Multi-Party Homomorphic Encryption (dMPHE) and Reusable Dynamic Multi-Party Homomorphic Encryption (rdMPHE) scheme (https://eprint.iacr.org/2025/581) published by the IACR in CIC 2026. This library is built upon (https://github.com/SNUCP/snu-mghe, from https://github.com/SNUCP/MKHE-KKLSS) and Lattigo v2.3.0(https://github.com/tuneinsight/lattigo/tree/v2.3.0).
 
 
 LICENSE
